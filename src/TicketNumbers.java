@@ -1,12 +1,22 @@
+import java.util.Scanner;
+
 
 public class TicketNumbers {
 
 	public static void main(String[] args) {
-		// -------INSTRUCTIONS-------
-		// 1. Copy and paste your code for the ticket numbers problem here (from yesterday)
-		// 2. Then delete these comments
-		// 3. Finally, commit and push the project containing this file to GitHub
-
+			int ticketNumber, stem, checkDigit;
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.print("Please enter a ticket number: ");
+			ticketNumber = sc.nextInt();
+			stem = ticketNumber / 10;
+			checkDigit = ticketNumber % 10;
+			
+			if (checkDigit == stem % 7) {
+				System.out.println("That is a valid ticket number, good job!");
+			} else {
+				System.out.println("That's not a valid ticket number, what do you think you are doing?!");
+			}
 	}
 
 }
